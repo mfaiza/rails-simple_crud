@@ -1,0 +1,13 @@
+<%= form_with model: [@article, @article.comments.build], local: true do |f| %>
+	<p>
+		<%= f.label :commenter, "Commenter" %>
+		<%= f.text_field :commenter %>
+	</p>
+	<p>
+		<%= f.label :body, "Body" %>
+		<%= f.text_area :body %>
+	</p>
+	<p>
+		<%= f.submit "Submit" %>
+	</p>
+<% end %>		
